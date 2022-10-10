@@ -59,11 +59,9 @@ app.get('/', (req, res) => {
       res.cookie('visitorId',nextVisitorId++);
   }
 
-  res.cookie('visitorId', visitorId);
   res.cookie('visited', Date.now());
   res.render('welcome', {
       name: req.query.name || "World",
-      lasttimevisit: lasttimevisit,
       visitorId: nextVisitorId,
       visitormsg: visitormsg
     });
