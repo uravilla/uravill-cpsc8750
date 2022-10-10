@@ -43,8 +43,6 @@ let nextVisitorId = 1;
 let visitormsg = ""
 app.get('/', (req, res) => {
   let lasttimevisit = req.cookies.visited;
-  let visitorId = req.cookies.visitorId;
-
   if (lasttimevisit == undefined) {
      visitormsg = "You have never visited before."
   }
