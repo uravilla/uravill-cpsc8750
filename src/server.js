@@ -57,10 +57,6 @@ app.get('/', (req, res) => {
   } else {
       res.cookie('visitorId',nextVisitorId++);
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> 9f79907e319482c48a47f9a403e761cc4063a1c6
   res.cookie('visited', Date.now());
   res.render('welcome', {
       name: req.query.name || "World",
